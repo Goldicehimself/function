@@ -74,3 +74,5 @@ console.log(withdraw(1002, 2000)); // to test insufficient funds withdrawal
 console.log(checkBalance(1001)); // to check balance after transactions
 console.log(checkBalance(1002));
 
+//Bank_Name on a global scope can be accessed by all functions
+// Fee_Rate on withdraw function is a local scope which is not accessible outside the function
