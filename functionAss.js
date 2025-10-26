@@ -55,10 +55,10 @@ function withdraw(accountId, amount){
         const totalDeduction = amount + fee;
         if(account.balance >= totalDeduction){
             account.balance -= totalDeduction;
-            return `Withdrew $${amount.toFixed(2)}  from Account ID: ${account.accountId}. \n New Balance: $${account.balance.toFixed(2)} (Fees Applied: $${fee.toFixed(2)})`;
+            return `Withdrew $${amount.toFixed(2)}  from Account ID: ${account.accountId}. New Balance: $${account.balance.toFixed(2)} (Fees Applied: $${fee.toFixed(2)})`;
         }
         else{
-            return ` Account Name: ${account.accountHolder} Insufficient funds. \n Account Type: ${account.type}. \n Current Balance: $${account.balance.toFixed(2)}`;
+            return ` Account Name: ${account.accountHolder} Insufficient funds. Account Type: ${account.type}. Current Balance: $${account.balance.toFixed(2)}`;
         }
     }
     else{
