@@ -30,7 +30,7 @@ function checkBalance(accountId){
 }
 console.log(checkBalance(1001)); // to test check balance
 console.log(checkBalance(1002));
-//console.log(checkBalance(1003));  used to test account not found
+console.log(checkBalance(1003));  //used to test account not found
 
 
 //function with is agruments accountId and amount
