@@ -32,7 +32,9 @@ console.log(checkBalance(1001)); // to test check balance
 console.log(checkBalance(1002));
 //console.log(checkBalance(1003));  used to test account not found
 
-function deposit(accountId, amount){
+
+//function with is agruments accountId and amount
+function deposit(accountId, amount ) {
     const account = customerAccounts.find(acct => acct.accountId === accountId);
     if(account){
         account.balance += amount;
