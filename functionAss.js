@@ -76,3 +76,11 @@ console.log(checkBalance(1002));
 
 //Bank_Name on a global scope can be accessed by all functions
 // Fee_Rate on withdraw function is a local scope which is not accessible outside the function
+
+
+console.log(BANKS_NAME)
+try{
+    console.log(Fee_Rate);
+} catch(error){
+    console.log("error : E nor possible bro")
+}
