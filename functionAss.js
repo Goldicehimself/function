@@ -13,12 +13,16 @@ const customerAccounts =[{
     accountId: 1002,
     accountHolder: "Amina Yusuf",
     balance: 1500.00,
-    type : "current",
+    type : "current", 
  }
 ];
+ 
+function findAccount(accountId) {
+    return customerAccounts.find(account => account.accountId === accountId)|| null;
+}
 
 function checkBalance(accountId){
-    const account = customerAccounts.find(acct => acct.accountId === accountId); 
+    const account = findAccount(accountId); 
     if(account){
         return `Bank Name: ${BANKS_NAME}, Account Holder: ${account.accountHolder}, Balance: $${account.balance.toFixed(2)}
          Id: ${account.accountId}`;
@@ -35,7 +39,7 @@ console.log(checkBalance(1003));  //used to test account not found
 
 //function with is agruments accountId and amount
 function deposit(accountId, amount ) {
-    const account = customerAccounts.find(acct => acct.accountId === accountId);
+    const account = findAccount(accountId);
     if(account){
         account.balance += amount;
         return `Deposited $${amount.toFixed(2)} to Account ID: ${account.accountId}. New Balance: $${account.balance.toFixed(2)}`;
@@ -50,7 +54,7 @@ console.log(deposit(1002, 400));
 
 
 function withdraw(accountId, amount){
-    const account = customerAccounts.find(acct => acct.accountId === accountId);
+    const account = findAccount(accountId);
     const Fee_Rate = 0.02; // 2% fee
     const fee = amount * Fee_Rate;
     if(account){
